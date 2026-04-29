@@ -12,7 +12,7 @@ import CameraSelector from './components/CameraSelector';
 import HistoryView from './components/HistoryView';
 import AuthModal from './components/AuthModal';
 import QuotaAlert from './components/QuotaAlert';
-import estatistica from './components/estistica';
+import estatistica from './components/estatistica';
 import SettingsModal, { translations, Language } from './components/SettingsModal';
 
 import { useHistory } from './hooks/useHistory';
@@ -28,7 +28,7 @@ import {
 
 import { AnalysisResult } from './types';
 
-type ActiveTab = 'scan' | 'live' | 'history' | 'map';
+type ActiveTab = 'scan' | 'live' | 'history' | 'map' | 'estatistica';
 
 function App() {
   const [activeTab, setActiveTab] = useState<ActiveTab>('scan');
@@ -128,6 +128,18 @@ function App() {
           <p className="text-xs text-amber-800 font-medium">{t.offlineBanner}</p>
         </div>
       )}
+
+      {activeTab === 'map' && (
+          <div className="flex flex-col items-center justify-center py-20 gap-4 text-emerald-400">
+            <Map className="w-12 h-12" />
+            <p className="text-sm font-medium">{t.mapSoon}</p>
+          </div>
+        )}
+
+        {/* ADICIONA ISTO AQUI */}
+        {activeTab === 'estatistica' && (
+          <estatistica history={history} />
+        )}
 
       <main className="max-w-2xl mx-auto px-6 py-8">
 
