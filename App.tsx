@@ -12,6 +12,7 @@ import CameraSelector from './components/CameraSelector';
 import HistoryView from './components/HistoryView';
 import AuthModal from './components/AuthModal';
 import QuotaAlert from './components/QuotaAlert';
+import estatistica from './components/estistica';
 import SettingsModal, { translations, Language } from './components/SettingsModal';
 
 import { useHistory } from './hooks/useHistory';
