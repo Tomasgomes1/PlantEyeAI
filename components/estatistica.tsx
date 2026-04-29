@@ -9,7 +9,7 @@ interface StatsViewProps {
   history: HistoryItem[];
 }
 
-// ── helpers ──────────────────────────────────────────────────────────────────
+// labels
 
 const statusLabel: Record<PlantStatus, string> = {
   [PlantStatus.HEALTHY]: 'Saudável',
@@ -29,7 +29,7 @@ function formatDate(ts: number) {
   return new Date(ts).toLocaleDateString('pt-PT', { day: '2-digit', month: 'short' });
 }
 
-// ── sub-components ───────────────────────────────────────────────────────────
+// ── sub-componentes ───────────────────────────────────────────────────────────
 
 function StatCard({
   icon,
