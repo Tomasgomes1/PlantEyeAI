@@ -3,7 +3,6 @@ import {
   Leaf, Camera, History, Settings, Info, Activity, Zap,
   WifiOff, Wifi, RefreshCw, Map, BarChart2,
 } from 'lucide-react';
-import LandingPage from './components/LandingPage';
 
 import PlantScanner from './components/PlantScanner';
 import LiveAssistant from './components/LiveAssistant';
